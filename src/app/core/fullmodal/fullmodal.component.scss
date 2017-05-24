@@ -24,15 +24,6 @@
     background: #fff;
 }
 
-.modal-close-bg {
-    position: fixed;
-    top:0;
-    right:0;
-    height:50px;
-    width: 250px;
-    background: #fff;
-}
-
 .close {
     padding: 15px;
 }
@@ -68,12 +59,12 @@
     background: #03e8b0;
 }
 
-.modal-footer-info #bar {
+.modal-footer-info .percentage-bar {
     background: #03e8b0;
-    width: 78%;
+    width: 0%;
     height: 30px;
 }
 
 .scrollY {
-    right: 1em;
+    right: 1.2em;
 }
