@@ -16,7 +16,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "coveralls": "cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js"
   },
   "private": true,
   "dependencies": {
@@ -45,13 +46,14 @@
     "@types/jasmine": "2.5.47",
     "@types/node": "~6.0.73",
     "codelyzer": "~3.0.1",
+    "coveralls": "^2.13.1",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
-    "karma": "~1.7.0",
+    "karma": "^1.7.0",
     "karma-chrome-launcher": "~2.1.1",
     "karma-cli": "~1.0.1",
     "karma-coverage-istanbul-reporter": "^0.2.0",
-    "karma-jasmine": "~1.1.0",
+    "karma-jasmine": "^1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "node-sass": "^4.5.2",
     "protractor": "~5.1.0",
