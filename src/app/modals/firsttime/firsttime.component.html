@@ -1,0 +1,42 @@
+<div class="modal fade" bsModal #firstTimeModal="bs-modal" [config]="{backdrop: true}">
+
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <button type="button" class="close pull-right" aria-label="Close" (click)="firstTimeModal.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+      <div class="row">
+        <img class="logo img-responsive" src="assets/particl-logo-white-bg.svg">
+      </div>
+      <div class="row">
+
+        <div class="col-xs-12 text-center">
+          <b>Welcome</b>, please select one of the options below.
+        </div>
+        <hr style="margin-top: 100px;">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-xs-12 text-right">
+              <button class="control">Create new wallet</button>
+            </div>
+            <div class="col-sm-6 col-xs-12 text-left">
+              <button class="control">Restore wallet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal-footer-info text-center" [ngClass]="{'scrollY': hasScrollY, 'synced': synced}">
+    <span *ngIf="synced">BLOCKCHAIN FULLY SYNCED</span>
+    <span *ngIf="!synced">{{ syncPercentage?.toFixed(1) }}%</span>
+    <div #percentageBar class="percentage-bar" [style.width]="syncPercentage + '%'">&nbsp;</div>
+  </div>
+
+</div>
+
+<button type="button" class="btn btn-primary" (click)="firstTimeModal.show()">First Time modal</button>
