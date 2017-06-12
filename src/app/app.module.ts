@@ -13,6 +13,7 @@ import { WindowService } from './core/window.service';
 import { AppComponent } from './app.component';
 import { StatusComponent } from './core/status/status.component';
 import { OverviewComponent } from './overview/overview.component';
+import { SettingsComponent } from './settings/settings.component';
 
 // TODO: Move to modal module
 import { FullmodalComponent } from './core/fullmodal/fullmodal.component';
@@ -23,19 +24,21 @@ import { FirsttimeComponent } from './modals/firsttime/firsttime.component';
 
 const routes: Routes = [
   { path: 'overview', component: OverviewComponent, data: { title: 'Overview' } },
+  { path: 'settings', component: SettingsComponent, data: { title: 'Settings' } },
   { path: '**', redirectTo: 'overview', pathMatch: 'full' } // Catch all route
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    OverviewComponent,
     StatusComponent,
+    OverviewComponent,
     FullmodalComponent,
     SyncingComponent,
     RecoverwalletComponent,
     GeneratewalletComponent,
-    FirsttimeComponent
+    FirsttimeComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

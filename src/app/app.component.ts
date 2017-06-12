@@ -4,10 +4,13 @@ import { Observable } from 'rxjs/Rx';
 
 import { WindowService } from './core/window.service';
 
+import { SettingsService } from './settings/settings.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss', './app.component.controls.scss']
+  styleUrls: ['./app.component.scss', './app.component.controls.scss'],
+  providers: [SettingsService]
 })
 export class AppComponent implements OnInit {
   isCollapsed: boolean = true;
@@ -18,7 +21,8 @@ export class AppComponent implements OnInit {
   constructor(
     private _router: Router,
     private _route: ActivatedRoute,
-    private _windowService: WindowService
+    private _windowService: WindowService,
+    private _settingsService: SettingsService
   ) {
     this.window = this._windowService;
   }
