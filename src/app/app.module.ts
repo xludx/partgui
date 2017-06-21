@@ -3,24 +3,20 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { BsDropdownModule, CollapseModule, ModalModule, PaginationModule } from 'ngx-bootstrap';
+import { NgxElectronModule } from 'ngx-electron';
 
 import { SharedModule } from './shared/shared.module';
 import { SidebarModule } from './core/sidebar/sidebar.module';
 import { WalletModule } from './wallet/wallet.module';
+import { ModalsModule } from './modals/modals.module';
 
 import { WindowService } from './core/window.service';
 
 import { AppComponent } from './app.component';
+import { AppService } from './app.service';
 import { StatusComponent } from './core/status/status.component';
 import { OverviewComponent } from './overview/overview.component';
 import { SettingsComponent } from './settings/settings.component';
-
-// TODO: Move to modal module
-import { FullmodalComponent } from './core/fullmodal/fullmodal.component';
-import { SyncingComponent } from './modals/syncing/syncing.component';
-import { RecoverwalletComponent } from './modals/recoverwallet/recoverwallet.component';
-import { GeneratewalletComponent } from './modals/generatewallet/generatewallet.component';
-import { FirsttimeComponent } from './modals/firsttime/firsttime.component';
 
 const routes: Routes = [
   { path: 'overview', component: OverviewComponent, data: { title: 'Overview' } },
@@ -33,26 +29,24 @@ const routes: Routes = [
     AppComponent,
     StatusComponent,
     OverviewComponent,
-    FullmodalComponent,
-    SyncingComponent,
-    RecoverwalletComponent,
-    GeneratewalletComponent,
-    FirsttimeComponent,
     SettingsComponent
   ],
   imports: [
     BrowserModule,
     BsDropdownModule.forRoot(),
+    NgxElectronModule,
     CollapseModule.forRoot(),
     PaginationModule.forRoot(),
     RouterModule.forRoot(routes),
     ModalModule.forRoot(),
     SharedModule,
     SidebarModule.forRoot(),
-    WalletModule.forRoot()
+    WalletModule.forRoot(),
+    ModalsModule
   ],
   providers: [
-    WindowService
+    WindowService,
+    AppService,
   ],
   bootstrap: [ AppComponent ]
 })
