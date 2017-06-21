@@ -13,7 +13,9 @@ import { ModalsService } from './modals/modals.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss', './app.component.controls.scss'],
-  providers: [SettingsService]
+  providers: [
+    SettingsService
+  ]
 })
 export class AppComponent implements OnInit {
   isCollapsed: boolean = true;
@@ -56,6 +58,11 @@ export class AppComponent implements OnInit {
   syncing() {
     this._modalsService.open('syncing');
     this._modalsService.updateProgress(48);
+  }
+
+  passphrase() {
+    this._modalsService.open('passphrase');
+    this._modalsService.updateProgress(99);
   }
 
   recover() {
