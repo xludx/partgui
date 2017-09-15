@@ -35,9 +35,13 @@ You can now navigate to `http://localhost:4200/`.
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
-## Build
+## Build core
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Build marketplace
+
+Run `ng build --app=mp` to build the project. The build artifacts will be stored in the `dist-mp/` directory. 
 
 ## Running unit tests
 
