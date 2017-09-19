@@ -21,6 +21,8 @@ import { StatusComponent } from './core/status/status.component';
 import { OverviewComponent } from './overview/overview.component';
 import { SettingsComponent } from './settings/settings.component';
 
+import { HeaderModule } from 'partgui-core-components-library'; // testing the import from core-components-library
+
 const routes: Routes = [
   { path: 'overview', component: OverviewComponent, data: { title: 'Overview' } },
   { path: 'settings', component: SettingsComponent, data: { title: 'Settings' } },
@@ -43,7 +45,8 @@ const routes: Routes = [
     SidebarModule.forRoot(),
     WalletModule.forRoot(),
     RpcModule.forRoot(),
-    ModalsModule
+    ModalsModule,
+    HeaderModule // testing the import from core-components-library
   ],
   providers: [
     WindowService
