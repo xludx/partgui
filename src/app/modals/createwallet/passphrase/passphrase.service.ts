@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
-
 import { RPCService } from '../../../core/rpc/rpc.service';
-
 import { Log } from 'ng2-logger';
-
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class PassphraseService {

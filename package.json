@@ -19,6 +19,7 @@
     "test": "ng test",
     "lint": "ng lint --type-check && htmlhint --ignore **/documentation/**,**/packages/** && sass-lint -v",
     "e2e": "ng e2e",
+    "packagr": "ng-packagr -p ng-package.json",
     "build:electron": "ng build --base-href='./' --env=prod && npm rebuild zeromq --runtime=electron --target=1.7.2",
     "start:electron:dev": "electron . --dev",
     "start:electron": "npm run build:electron && electron .",
@@ -30,6 +31,7 @@
     "compdoc": "compodoc -p tsconfig.json",
     "generate-release": "node ./modules/clientBinaries/generateVersions.js"
   },
+  "private": false,
   "build": {
     "electronVersion": "1.7.5",
     "appId": "io.particl.partgui",
@@ -102,7 +104,7 @@
     "ngx-electron": "^1.0.2",
     "node-unzip-2": "^0.2.1",
     "open-sans-all": "^0.1.2",
-    "partgui-core-components-library": "file:///Users/juha/Work/particl/partgui-core-components-library/dist/partgui-core-components-library-0.0.1.tgz",
+    "partgui-core-components-library": "../partgui-core-components-library/dist/partgui-core-components-library-0.0.1.tgz",
     "protractor": "^5.1.2",
     "rx-ipc-electron": "^0.1.2",
     "rxjs": "^5.4.2",

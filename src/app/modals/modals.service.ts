@@ -10,6 +10,7 @@ import { DaemonComponent } from './daemon/daemon.component';
 import { SyncingComponent } from './syncing/syncing.component';
 import { UnlockwalletComponent } from './unlockwallet/unlockwallet.component';
 import { EncryptwalletComponent } from './encryptwallet/encryptwallet.component';
+import { Observable } from 'rxjs/Observable'; // <-- needed to get rid of Return type of public method from exported class has or is using name 'Observable' from external module ... but cannot be named.
 
 @Injectable()
 export class ModalsService {

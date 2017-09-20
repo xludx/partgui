@@ -1,4 +1,4 @@
-interface Deserializable {
+export interface Deserializable {
     getTypes(): Object;
 }
 

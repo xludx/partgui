@@ -13,18 +13,18 @@ import { ModalsService } from './modals/modals.service';
 import { BlockStatusService } from './core/rpc/blockstatus.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss', './app.component.controls.scss'],
+  selector: 'partgui-root',
+  templateUrl: './partgui.component.html',
+  styleUrls: ['./partgui.component.scss', './partgui.component.controls.scss'],
   providers: [
     SettingsService
   ]
 })
-export class AppComponent implements OnInit {
+export class PartGuiComponent implements OnInit {
   isCollapsed: boolean = true;
   isFixed: boolean = false;
   title: string = '';
-  log: any = Log.create('app.component');
+  log: any = Log.create('partgui.component');
 
   constructor(
     private _router: Router,

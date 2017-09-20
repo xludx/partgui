@@ -99,7 +99,7 @@
       "check-type"
     ],
 
-    "directive-selector": [true, "attribute", "app", "camelCase"],
+    "directive-selector": [true, "attribute", "partgui", "camelCase"],
     /* "component-selector": [true, "element", "app", "kebab-case"],*
      * Would be nice if we could make this apply to certain components only...
      */

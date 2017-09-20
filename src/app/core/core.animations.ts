@@ -1,7 +1,8 @@
 import {
   trigger, state, style,
-  animate, transition, keyframes
+  animate, transition, keyframes, AnimationTriggerMetadata
 } from '@angular/animations';
+import { Observable } from 'rxjs/Observable';
 
 export function flyInOut() {
   return trigger('flyInOut', [

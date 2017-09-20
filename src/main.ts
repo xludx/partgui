@@ -2,7 +2,7 @@ import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { Log, Level } from 'ng2-logger';
 
-import { AppModule } from './app/app.module';
+import { PartGuiModule } from './app/partgui.module';
 import { environment } from './environments/environment';
 
 if (environment.production) {
@@ -19,6 +19,6 @@ if (environment.envName === 'dev') {
 
 const log: any = Log.create('main');
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+platformBrowserDynamic().bootstrapModule(PartGuiModule)
   .then(success => log.d('Ready. (env: ' + environment.envName + ')'))
   .catch(err => console.error(err));

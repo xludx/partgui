@@ -3,27 +3,27 @@ import { APP_BASE_HREF } from '@angular/common';
 
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { AppModule } from './app.module';
-import { AppComponent } from './app.component';
+import { PartGuiModule } from './partgui.module';
+import { PartGuiComponent } from './partgui.component';
 
 import { WindowService } from './core/window.service';
 
 describe('AppComponent', () => {
 
-let component: AppComponent;
+let component: PartGuiComponent;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports : [
         RouterTestingModule,
-        AppModule
+        PartGuiModule
       ],
       providers: [ {provide: APP_BASE_HREF, useValue: '/'} ]
     }).compileComponents();
   }));
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    const fixture = TestBed.createComponent(PartGuiComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
     component = app;

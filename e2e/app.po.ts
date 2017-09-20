@@ -6,6 +6,6 @@ export class PartguiPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('partgui-root h1')).getText();
   }
 }

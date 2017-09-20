@@ -15,13 +15,13 @@ import { ModalsModule } from './modals/modals.module';
 import { StateService } from './core/state/state.service';
 import { WindowService } from './core/window.service';
 
-import { AppComponent } from './app.component';
+import { PartGuiComponent } from './partgui.component';
 
 import { StatusComponent } from './core/status/status.component';
 import { OverviewComponent } from './overview/overview.component';
 import { SettingsComponent } from './settings/settings.component';
 
-import { HeaderModule } from 'partgui-core-components-library'; // testing the import from core-components-library
+import { ExampleModule } from 'partgui-core-components-library'; // testing the import from core-components-library
 
 const routes: Routes = [
   { path: 'overview', component: OverviewComponent, data: { title: 'Overview' } },
@@ -31,7 +31,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
+    PartGuiComponent,
     StatusComponent,
     OverviewComponent,
     SettingsComponent
@@ -46,15 +46,15 @@ const routes: Routes = [
     WalletModule.forRoot(),
     RpcModule.forRoot(),
     ModalsModule,
-    HeaderModule // testing the import from core-components-library
+    ExampleModule // testing the import from core-components-library
   ],
   providers: [
     WindowService
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ PartGuiComponent ]
 })
 
-export class AppModule {
+export class PartGuiModule {
   constructor() {
   }
 }
