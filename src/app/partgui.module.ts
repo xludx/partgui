@@ -46,7 +46,7 @@ const routes: Routes = [
     WalletModule.forRoot(),
     RpcModule.forRoot(),
     ModalsModule,
-    ExampleModule // testing the import from core-components-library
+    ExampleModule.forRoot() // testing the import from core-components-library
   ],
   providers: [
     WindowService

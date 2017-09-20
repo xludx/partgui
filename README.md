@@ -16,7 +16,20 @@ git clone https://github.com/particl/partgui
 cd partgui
 npm install
 ```
-* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+* Go to the partgui-core-components-library project and build and package the library.
+```
+cd ../partgui-core-components-library
+npm run watch
+```
+
+* Link core component dependencies to this project
+```
+ln -s /Users/juha/Work/particl/partgui-core-components-library/dist /Users/juha/.npm-packages/lib/node_modules/partgui-core-components-library
+ln -s /Users/juha/.npm-packages/lib/node_modules/partgui-core-components-library /Users/juha/Work/particl/partgui-client/node_modules/partgui-core-components-library
+```
+
+* Run `ng serve --preserve-symlinks` or `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## With real rpc data
 ### Start
